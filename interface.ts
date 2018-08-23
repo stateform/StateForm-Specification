@@ -17,9 +17,8 @@ export interface FormItemCols {
 }
 
 
-
 export interface FormItem {
-  component: string,
+  component: string;
   path: string;
   hidden?: boolean;
   class?: string | {
@@ -44,19 +43,19 @@ export interface FormItem {
 }
 
 export interface Form {
-  component: "Form",
-  path: '/',
+  component: "Form";
+  path: '/';
+  children: FormItem[];
   cols: FormItemCols;
   submitCols?: FormItemCols;
   submitText?: string;
   showSubmit?: boolean;
-  children: FormItem[]
 }
 
 export interface Input extends FormItem {
   type?: 'text' | 'password';
-  prepend?: string,
-  append?: string
+  prepend?: string;
+  append?: string;
 }
 
 export interface Textarea extends FormItem{
