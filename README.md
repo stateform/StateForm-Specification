@@ -59,7 +59,7 @@ StateForm 只有两个事件, 分别是 `input` 和 `submit`
 
 
 
-## 内置组件(component)  
+## 内置组件(component)及其属性  
 下面是几个基本接口  
 ```ts 
 // 用于布局, 采用 24 格栅格布局系统 
@@ -245,3 +245,6 @@ interface Select extends FormItem {
 ## Implementation    
 * [stateform-iview](https://github.com/stateform/stateform-iview)  
 * [stateform-antd](https://github.com/stateform/stateform-antd)
+
+## License  
+Apache 2.0
