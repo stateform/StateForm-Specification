@@ -2,7 +2,7 @@
 # StateForm  
 StateForm 定义了一个基于 JSON 的结构用来描述一个表单的状态(state), 同时定义了一些表单事件和内置组件. 借助相关实现, 你可以使用一个 json 对象来生成表单. 
 
-目前它用于 [gateschema-form-vue](https://github.com/GateSchema/gateschema-form-vue) 和 [gateschema-form-react](https://github.com/GateSchema/gateschema-form-react) 中,  只需要传入一个 [GateSchema]() 即可得到一个带有验证功能的可用的表单  
+目前它用于 [gateschema-form-vue](https://github.com/GateSchema/gateschema-form-vue) 和 [gateschema-form-react](https://github.com/GateSchema/gateschema-form-react) 中,  只需要传入一个 [GateSchema](https://github.com/GateSchema/gateschema-js) 即可得到一个带有验证功能的可用的表单  
 ## 状态(state) 
 一个表单的状态使用一个树形的 json 对象来表示, 每一个节点  
 * 至少包含一个 `component` 字段, 表示当前节点渲染成表单时所用的组件    
@@ -43,8 +43,7 @@ StateForm 定义了一个基于 JSON 的结构用来描述一个表单的状态(
 
 ![example](docs/resources/f-quickstart.png)  
 
-**更丰富的例子请看 [CodeSandbox](https://codesandbox.io/s/lx8q1143mz?module=%2Fsrc%2FformState.js)**
-
+**更丰富的例子请看 [CodeSandbox](https://codesandbox.io/s/lx8q1143mz?expanddevtools=1)**
 
 ## 事件(event)  
 StateForm 只有两个事件, 分别是 `input` 和 `submit`
@@ -240,7 +239,7 @@ interface Select extends FormItem {
 ```
 
 ## Example  
-[![Edit StateForm of Antd Demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/lx8q1143mz?module=%2Fsrc%2FformState.js)
+[![Edit StateForm of Antd Demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/lx8q1143mz?expanddevtools=1)
 
 ## Implementation    
 * [stateform-iview](https://github.com/stateform/stateform-iview)  
