@@ -1,10 +1,10 @@
 [English(WIP)](#)
 # StateForm  
-StateForm 定义了一个基于 JSON 的结构用来描述一个表单的状态(state), 同时定义了一些表单事件和内置组件. 借助相关实现, 你可以使用一个 json 对象来生成表单. 
+StateForm 定义了一个基于 JSON 的结构, 用来描述一个表单的状态(state), 同时定义了一些表单事件和内置组件. 借助相关实现, 你可以使用一个 json 对象来生成表单. 
 
 目前它用于 [gateschema-form-vue](https://github.com/GateSchema/gateschema-form-vue) 和 [gateschema-form-react](https://github.com/GateSchema/gateschema-form-react) 中,  只需要传入一个 [GateSchema](https://github.com/GateSchema/gateschema-js) 即可得到一个带有验证功能的可用的表单  
 ## 状态(state) 
-一个表单的状态使用一个树形的 json 对象来表示, 每一个节点  
+一个表单的状态使用一个树形的 JSON 对象来表示, 每一个节点  
 * 至少包含一个 `component` 字段, 表示当前节点渲染成表单时所用的组件    
 * 至少包含一个 `path` 字段, 表示当前节点的层级位置     
 * 可能还有一个 `children` 字段, 包含了它的子节点  
@@ -62,20 +62,29 @@ StateForm 只有两个事件, 分别是 `input` 和 `submit`
 下面是几个基本接口  
 ```ts 
 // 用于布局, 采用 24 格栅格布局系统 
-type Cols = number | {
+type Cols = {
   span: number;
   offset: number;
 }
 
 interface FormItemCols {
-  label: Cols;
-  wrapper: Cols;
+  item?: Cols | number; // when layout=inline, `item` cols is needed
+  label?: Cols | number;
+  wrapper?: Cols | number;
+
+  xsItem?: Cols;
   xsLabel?: Cols;
   xsWrapper?: Cols;
+
+  smItem?: Cols;
   smLabel?: Cols;
   smWrapper?: Cols;
+
+  mdItem?: Cols;
   mdLabel?: Cols;
   mdWrapper?: Cols;
+
+  lgItem?: Cols;
   lgLabel?: Cols;
   lgWrapper?: Cols;
 }

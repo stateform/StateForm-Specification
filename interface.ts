@@ -1,19 +1,29 @@
-export type Cols = number | {
+export type Cols = {
   span: number;
   offset: number;
 }
 
 export interface FormItemCols {
-  label: Cols;
-  wrapper: Cols;
+  item?: Cols | number; // when layout=inline, `item` cols is needed
+  label?: Cols | number;
+  wrapper?: Cols | number;
+
+  xsItem?: Cols;
   xsLabel?: Cols;
   xsWrapper?: Cols;
+
+  smItem?: Cols;
   smLabel?: Cols;
   smWrapper?: Cols;
+
+  mdItem?: Cols;
   mdLabel?: Cols;
   mdWrapper?: Cols;
+
+  lgItem?: Cols;
   lgLabel?: Cols;
   lgWrapper?: Cols;
+
 }
 
 
