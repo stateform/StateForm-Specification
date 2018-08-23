@@ -43,7 +43,7 @@ StateForm 定义了一个基于 JSON 的结构用来描述一个表单的状态(
 
 ![example](docs/resources/f-quickstart.png)  
 
-**更丰富的例子请看 [CodeSandbox](https://codesandbox.io/s/lx8q1143mz?expanddevtools=1)**
+**更丰富的例子请看 <a href="https://codesandbox.io/s/lx8q1143mz?expanddevtools=1" target="_blank">CodeSandbox</a>**
 
 ## 事件(event)  
 StateForm 只有两个事件, 分别是 `input` 和 `submit`
@@ -239,7 +239,7 @@ interface Select extends FormItem {
 ```
 
 ## Example  
-[![Edit StateForm of Antd Demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/lx8q1143mz?expanddevtools=1)
+<a href="https://codesandbox.io/s/lx8q1143mz?expanddevtools=1" target="_blank">CodeSandbox</a>
 
 ## Implementation    
 * [stateform-iview](https://github.com/stateform/stateform-iview)  
