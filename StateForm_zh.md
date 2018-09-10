@@ -132,9 +132,14 @@ interface Form {
   path: '/';
   children: FormItem[];
   cols: FormItemCols;
-  submitCols?: FormItemCols;
-  submitText?: string;
-  showSubmit?: boolean;
+  footer: {
+    cols?: FormItemCols;
+    showSubmit?: boolean;
+    showReset?: boolean;
+    submitText?: string;
+    resetText?: string;
+    disableSubmit?: boolean;
+  }
 }
 ```
 
